@@ -6,7 +6,7 @@
             <video controls :poster="current.posterPath" playsinline></video>
           </div>
           <figcaption>
-            <a :href="video.urlPath" class="currentvid" v-for="video in videos" @click.prevent="playVideo(video)">
+            <a :href="video.urlPath" v-for="video in videos" @click.prevent="playVideo(video)">
               <img :src="video.posterPath" :alt="video.title">
             </a>
           </figcaption>
@@ -83,6 +83,9 @@ body { background: #222; }
 #video-player figcaption a { 
   opacity: .5;
   transition: 1s opacity; 
+}
+#video-player figcaption a:hover {
+  opacity: 1;
 }
 #video-player figcaption a img, figure video { 
   width: 100%; height: auto; 
