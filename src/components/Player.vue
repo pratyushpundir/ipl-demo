@@ -62,7 +62,7 @@ body { background: #222; }
   font-size: 0; background: #000;
   max-width: 1000px;
   margin: 0 auto;
-  height: 50vh;
+  height: 10vh;
 }
 #video-container { 
   position: relative;

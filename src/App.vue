@@ -1,45 +1,67 @@
 <template>
-  <div class="content">
-    <div class="columns">
-      
-      <div class="column">
-        <player :videos="videos" :current="current" @update:current="val => current = val"></player>
+  <section class="hero is-info is-fullheight">
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">
+            IPL Demo
+          </a>
+        </div>
+        <span class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-active">
+            <i class="fa fa-github"></i>&nbsp;Code on Github
+          </a>
+        </div>
       </div>
-      
-    </div>
+    </header>
+  </div>
 
-    <hr>
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <player :videos="videos" :current="current" @update:current="val => current = val"></player>
 
-    <div class="columns">
-      <div class="column" id="add-video">
-        <form @submit.prevent="addVideo()">
-          
-          <div class="columns">
-            <div class="column">
-              <div class="field">
-                <p class="control">
-                  <input class="input" type="text" v-model="newVideo.urlPath" placeholder="Video url">
-                </p>
+      <hr>
+
+      <div class="columns">
+        <div class="column" id="add-video">
+          <form @submit.prevent="addVideo()">
+            
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <p class="control">
+                    <input class="input" type="text" v-model="newVideo.urlPath" placeholder="Video url">
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <div class="field">
+                  <p class="control">
+                    <input class="input" type="text" v-model="newVideo.posterPath" placeholder="Poster url">
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="column">
-              <div class="field">
-                <p class="control">
-                  <input class="input" type="text" v-model="newVideo.posterPath" placeholder="Poster url">
-                </p>
-              </div>
-            </div>
-          </div>
 
-          <p class="control">
-            <button class="button is-primary" type="submit">
-              Add Video
-            </button>
-          </p>
-        </form>
+            <p class="control">
+              <button class="button is-primary" type="submit">
+                Add Video
+              </button>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+</section>
 </template>
 
 <script>
@@ -118,15 +140,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 100px;
-}
-
-body .container {
-  margin-top: 2em;
 }
 
 #add-video {
-  height: 50vh;
+  height: 10vh;
 }
 </style>
