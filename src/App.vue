@@ -87,11 +87,13 @@ export default {
   mounted () {
     videosRef.once('value', function (snapshot) {
       snapshot.forEach(function (childSnapshot) {
-        this.current = childSnapshot.val()
+        let i = 0
+        if (i < 1) {
+          this.current = childSnapshot.val()
+          i++
+        }
       }.bind(this))
     }.bind(this))
-
-    console.log(this.current)
   },
 
   methods: {

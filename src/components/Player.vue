@@ -30,7 +30,7 @@
     },
 
     mounted () {
-      this.getPlayer()
+      this.player = document.querySelector('#video-player video')
     },
 
     components: {
@@ -41,18 +41,14 @@
       playVideo (video) {
         let sourceHTML = '<source src="' + video.urlPath + '" type="video/mp4">'
 
-        this.player.removeAttr('controls')
-        this.player.removeAttr('poster')
-        this.player.html(sourceHTML)
+        this.player.removeAttribute('controls')
+        this.player.removeAttribute('poster')
+        this.player.innerHTML = sourceHTML
 
         this.$emit('update:current', video)
 
         this.player.load()
         this.player.play()
-      },
-
-      getPlayer () {
-        return document.querySelector('#video-player video')
       }
     }
   }
