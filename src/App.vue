@@ -15,7 +15,7 @@
           <span></span>
         </span>
         <div class="nav-right nav-menu">
-          <a class="nav-item is-active">
+          <a class="nav-item is-active" href="https://github.com/pratyushpundir/ipl-demo" target="_blank">
             <i class="fa fa-github"></i>&nbsp;Code on Github
           </a>
         </div>
@@ -38,14 +38,14 @@
               <div class="column">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="text" v-model="newVideo.urlPath" placeholder="Video url">
+                    <input class="input" type="text" v-model="newVideo.urlPath" placeholder="Full url to the video" required>
                   </p>
                 </div>
               </div>
               <div class="column">
                 <div class="field">
                   <p class="control">
-                    <input class="input" type="text" v-model="newVideo.posterPath" placeholder="Poster url">
+                    <input class="input" type="text" v-model="newVideo.posterPath" placeholder="Full url to the Poster image" required>
                   </p>
                 </div>
               </div>
