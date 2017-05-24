@@ -142,6 +142,7 @@ body { background: #222; }
   height: 100%;
   z-index: 50000;
   padding-top: 5em;
+  opacity: 0;
 }
 
 button.is-circle {
