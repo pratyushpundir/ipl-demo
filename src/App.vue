@@ -40,6 +40,7 @@
                   <p class="control">
                     <input class="input" type="text" v-model="newVideo.urlPath" placeholder="Full url to the video" required>
                   </p>
+                  <p class="help is-info">Example: 'http://sublimearts.me/storage/app/media/ipl-demo/videos/waterfall.mp4'</p>
                 </div>
               </div>
               <div class="column">
@@ -47,6 +48,7 @@
                   <p class="control">
                     <input class="input" type="text" v-model="newVideo.posterPath" placeholder="Full url to the Poster image" required>
                   </p>
+                  <p class="help is-info">Example: 'http://sublimearts.me/storage/app/media/ipl-demo/posters/waterfall.jpg'</p>
                 </div>
               </div>
             </div>
@@ -144,5 +146,9 @@ export default {
 
 #add-video {
   height: 10vh;
+}
+
+p.help.is-info {
+  color: white;
 }
 </style>
