@@ -81,7 +81,7 @@ let config = {
 
 let firebaseApp = Firebase.initializeApp(config)
 let db = firebaseApp.database()
-let videosRef = db.ref('videos')
+let videosRef = db.ref('videos').orderByKey()
 
 export default {
   name: 'app',
